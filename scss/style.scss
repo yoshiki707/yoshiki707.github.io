@@ -1,5 +1,6 @@
 
 @import "_reset";
+@import "_colors";
 // header
 .wrap {
   margin: 0 3%;
@@ -9,5 +10,5 @@
   max-width: 1200px;
   margin: 0 auto;
   height: 40px;
-  background-color: gray;
+  @include border-bottom();
 }

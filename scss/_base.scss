@@ -1,0 +1,13 @@
+$White: "#ffffff";
+$black: "#2B2D2E";
+$Gray: "#F0F3F5";
+$DarkGray: "#B2B7C1";
+
+// border
+@mixin border-bottom ($color:#B2B7C1) {
+  border-bottom: 1px solid $color;
+}
+
+// size
+$base-size: "8px";
+$content-size: "1200px";
