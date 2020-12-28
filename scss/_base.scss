@@ -1,8 +1,8 @@
+// color
 $White: #ffffff;
 $black: #2B2D2E;
 $Gray: #F0F3F5;
 $DarkGray: #B2B7C1;
-
 // border
 @mixin border-bottom ($color:$DarkGray) {
   border-bottom: 1px solid $color;
@@ -16,3 +16,10 @@ $DarkGray: #B2B7C1;
 // size
 $base-size: 8px;
 $content-size: 1200px;
+// 文字色の設定
+h1, h2, h3, h4, h5, div, p, span, blockquote, dl, dd {
+  color: $black;
+}
+a {
+  text-decoration: none;
+}

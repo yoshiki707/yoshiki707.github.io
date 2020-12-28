@@ -60,6 +60,14 @@ input, button, textarea, select {
   }
 }
 
+h1, h2, h3, h4, h5, div, p, span, blockquote, dl, dd {
+  color: #2B2D2E;
+}
+
+a {
+  text-decoration: none;
+}
+
 .wrap {
   margin: 0 5%;
 }
