@@ -34,14 +34,18 @@
 }
 .common-section {
   padding: $base-size * 3;
+  width: 50%;
   &__form {
     width: 100%;
+    @include flex-center();
+    flex-direction: column;
     &-control {
       border: none;
       border-radius: $base-size;
       padding: 0 $base-size * 2;
       height: $base-size * 6;
       margin:  $base-size * 2 0;
+      width: 100%;
     }
   }
 }
