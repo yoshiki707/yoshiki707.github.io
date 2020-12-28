@@ -139,13 +139,25 @@ a {
           flex-direction: column;
 }
 
+.common-section__form label {
+  cursor: pointer;
+}
+
+.common-section__form label:hover + input {
+  border: 1px solid #0099E7;
+}
+
 .common-section__form-control {
   border: none;
   border-radius: 8px;
   padding: 0 16px;
-  height: 48px;
+  height: 56px;
   margin: 16px 0;
   width: 100%;
   text-align: center;
+}
+
+.common-section__form-control:hover {
+  border: 1px solid #0099E7;
 }
 /*# sourceMappingURL=style.css.map */

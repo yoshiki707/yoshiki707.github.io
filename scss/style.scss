@@ -39,14 +39,23 @@
     width: 100%;
     @include flex-center();
     flex-direction: column;
+    label {
+      cursor: pointer;
+      &:hover + input {
+        border: 1px solid $Bule;
+      }
+    }
     &-control {
       border: none;
       border-radius: $base-size;
       padding: 0 $base-size * 2;
-      height: $base-size * 6;
+      height: $base-size * 7;
       margin:  $base-size * 2 0;
       width: 100%;
       text-align: center;
+      &:hover {
+        border: 1px solid $Bule;
+      }
     }
   }
 }
