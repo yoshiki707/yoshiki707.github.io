@@ -93,6 +93,10 @@ input, button, textarea, select {
   text-align: center;
 }
 
+.contents {
+  width: 100%;
+}
+
 .contents-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -107,5 +111,17 @@ input, button, textarea, select {
 
 .common-section {
   padding: 24px;
+}
+
+.common-section__form {
+  width: 100%;
+}
+
+.common-section__form-control {
+  border: none;
+  border-radius: 8px;
+  padding: 0 16px;
+  height: 48px;
+  margin: 16px 0;
 }
 /*# sourceMappingURL=style.css.map */

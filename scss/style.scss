@@ -27,10 +27,21 @@
   }
 }
 .contents {
+  width: 100%;
   &-flex {
     @include flex-center();
   }
 }
 .common-section {
   padding: $base-size * 3;
+  &__form {
+    width: 100%;
+    &-control {
+      border: none;
+      border-radius: $base-size;
+      padding: 0 $base-size * 2;
+      height: $base-size * 6;
+      margin:  $base-size * 2 0;
+    }
+  }
 }
