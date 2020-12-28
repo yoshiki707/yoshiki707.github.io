@@ -87,4 +87,12 @@ input, button, textarea, select {
   margin: 0 auto;
   background-color: #F0F3F5;
 }
+
+.container {
+  margin: 0 3%;
+}
+
+.container .main-title {
+  text-align: center;
+}
 /*# sourceMappingURL=style.css.map */

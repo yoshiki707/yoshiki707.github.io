@@ -19,3 +19,9 @@
   margin: 0 auto;
   background-color: $Gray;
 }
+.container {
+  margin: 0 3%;
+  .main-title {
+    text-align: center;
+  }
+}
