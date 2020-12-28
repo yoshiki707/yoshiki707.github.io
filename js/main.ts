@@ -1,5 +1,5 @@
 const addTask = document.getElementById('addForm');
-const list = document.getElementById('#todoLists');
+const list = document.getElementById('todoLists');
 
 const createTodoList = (task:string | number) => {
   // HTML テンプレートを生成

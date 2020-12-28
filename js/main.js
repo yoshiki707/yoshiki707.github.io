@@ -1,6 +1,6 @@
 "use strict";
 var addTask = document.getElementById('addForm');
-var list = document.getElementById('#todoLists');
+var list = document.getElementById('todoLists');
 var createTodoList = function (task) {
     // HTML テンプレートを生成
     var html = "\n  <li>\n    <span>" + task + "</span>\n    <i class=\"far fa-trash-alt delete\"></i>\n  </li>\n  ";
