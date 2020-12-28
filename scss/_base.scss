@@ -7,12 +7,12 @@ $DarkGray: "#B2B7C1";
 @mixin border-bottom ($color:#B2B7C1) {
   border-bottom: 1px solid $color;
 }
+// flex
 @mixin flex-center () {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 // size
 $base-size: "8px";
 $content-size: "1200px";
