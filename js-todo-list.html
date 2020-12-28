@@ -21,26 +21,26 @@
           <h1>Todo List</h1>
         </div>
         <article class="contetns">
-          <section class="common-section">
-            <form action="" class="common-section__form">
-              <label for="searchBox">
-                <h2>タスクを検索する</h2>
-              </label>
-              <input id="searchBox" type="text" class="common-section__form-control" name="search" placeholder="Search KeyWord">
-            </form>
-          </section>
-          <section class="common-section">
-            <form action="" class="common-section__form">
-              <label for="addBox">
-                <h2>タスクを追加する</h2>
-              </label>
-              <input id="addBox" type="text" class="common-section__form-control" name="search" placeholder="Add KeyWord">
-            </form>
-          </section>
+          <div class="contents-flex">
+            <section class="common-section">
+              <form action="" class="common-section__form" id="addForm">
+                <label for="addBox">
+                  <h2>タスクを追加する</h2>
+                </label>
+                <input id="addBox" type="text" class="common-section__form-control" name="search" placeholder="Add KeyWord">
+              </form>
+            </section>
+            <section class="common-section">
+              <form action="" class="common-section__form" id="searchForm">
+                <label for="searchBox">
+                  <h2>タスクを検索する</h2>
+                </label>
+                <input id="searchBox" type="text" class="common-section__form-control" name="search" placeholder="Search KeyWord">
+              </form>
+            </section>
+          </div>
           <section class="contents">
-            <ul class="contents-items">
-              <li></li>
-              <li></li>
+            <ul class="contents-items" id="todoLists">
             </ul>
           </section>
         </article>

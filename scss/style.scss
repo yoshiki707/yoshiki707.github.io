@@ -18,10 +18,19 @@
   max-width: 1200px;
   margin: 0 auto;
   background-color: $Gray;
+  padding: $base-size * 3;
 }
 .container {
-  margin: 0 3%;
+  // margin: 0 3%;
   .main-title {
     text-align: center;
   }
+}
+.contents {
+  &-flex {
+    @include flex-center();
+  }
+}
+.common-section {
+  padding: $base-size * 3;
 }

@@ -5,3 +5,6 @@ index.html
 
 ## Todo list
 js-todo-list.html
+
+## TypeScript
+tsc --watch
