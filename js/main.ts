@@ -1,7 +1,7 @@
 const addTask = document.getElementById('addForm');
 const list = document.getElementById('#todoLists');
 
-const createTodoList = task => {
+const createTodoList = (task:string | number) => {
   // HTML テンプレートを生成
   const html = `
   <li>
@@ -15,9 +15,9 @@ const createTodoList = task => {
   }
 }
 if(addTask) {
-  addTask.addEventListener('submit', e => {
+  addTask.addEventListener('submit', (e) => {
     // デフォルトのイベントを無効
-    e.preventDedault();
+    e.preventDefault();
   
     // タスクに入力した値を空白を除外して格納
     const task = addTask.add.value.trim();

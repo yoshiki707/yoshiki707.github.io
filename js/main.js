@@ -11,7 +11,7 @@ var createTodoList = function (task) {
 if (addTask) {
     addTask.addEventListener('submit', function (e) {
         // デフォルトのイベントを無効
-        e.preventDedault();
+        e.preventDefault();
         // タスクに入力した値を空白を除外して格納
         var task = addTask.add.value.trim();
         if (task.length) {
