@@ -3,13 +3,13 @@
 @import "_base";
 // header
 .wrap {
-  margin: 0 5%;
+  margin: 0 3%;
 }
 .header {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  height: 80px;
+  height: $base-size * 10;
   @include border-bottom();
   @include flex-center();
 }
