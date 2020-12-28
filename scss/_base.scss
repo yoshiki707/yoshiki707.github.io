@@ -5,6 +5,9 @@ $Gray: #F0F3F5;
 $DarkGray: #B2B7C1;
 $Bule: #0099E7;
 // border
+@mixin border ($color:$DarkGray) {
+  border: 1px solid $color;
+}
 @mixin border-bottom ($color:$DarkGray) {
   border-bottom: 1px solid $color;
 }

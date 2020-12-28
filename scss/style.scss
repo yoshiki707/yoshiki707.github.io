@@ -42,7 +42,7 @@
     label {
       cursor: pointer;
       &:hover + input {
-        border: 1px solid $Bule;
+        @include border($Bule);
       }
     }
     &-control {
@@ -54,7 +54,7 @@
       width: 100%;
       text-align: center;
       &:hover {
-        border: 1px solid $Bule;
+        @include border($Bule);
       }
     }
   }
