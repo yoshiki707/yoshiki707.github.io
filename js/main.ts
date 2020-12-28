@@ -1,5 +1,5 @@
 const addTask = (document.getElementById('addForm') as HTMLFormElement);
-const list = document.getElementById('todoLists');
+const list = (document.getElementById('todoLists') as HTMLElement);
 
 const createTodoList = (task:string | number) => {
   // HTML テンプレートを生成
@@ -10,9 +10,7 @@ const createTodoList = (task:string | number) => {
   </li>
   `;
 
-  if(list) {
-    list.innerHTML += html;
-  }
+  list.innerHTML += html;
 }
 addTask.addEventListener('submit', (e) => {
   // デフォルトのイベントを無効

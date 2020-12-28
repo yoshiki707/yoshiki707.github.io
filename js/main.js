@@ -4,9 +4,7 @@ var list = document.getElementById('todoLists');
 var createTodoList = function (task) {
     // HTML テンプレートを生成
     var html = "\n  <li>\n    <span>" + task + "</span>\n    <i class=\"far fa-trash-alt delete\"></i>\n  </li>\n  ";
-    if (list) {
-        list.innerHTML += html;
-    }
+    list.innerHTML += html;
 };
 addTask.addEventListener('submit', function (e) {
     // デフォルトのイベントを無効
