@@ -1,10 +1,10 @@
-$White: "#ffffff";
-$black: "#2B2D2E";
-$Gray: "#F0F3F5";
-$DarkGray: "#B2B7C1";
+$White: #ffffff;
+$black: #2B2D2E;
+$Gray: #F0F3F5;
+$DarkGray: #B2B7C1;
 
 // border
-@mixin border-bottom ($color:#B2B7C1) {
+@mixin border-bottom ($color:$DarkGray) {
   border-bottom: 1px solid $color;
 }
 // flex
