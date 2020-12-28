@@ -1,4 +1,4 @@
-const addTask = document.getElementById('addForm');
+const addTask = (document.getElementById('addForm') as HTMLFormElement);
 const list = document.getElementById('todoLists');
 
 const createTodoList = (task:string | number) => {
@@ -14,18 +14,16 @@ const createTodoList = (task:string | number) => {
     list.innerHTML += html;
   }
 }
-if(addTask) {
-  addTask.addEventListener('submit', (e) => {
-    // デフォルトのイベントを無効
-    e.preventDefault();
-  
-    // タスクに入力した値を空白を除外して格納
-    const task = addTask.add.value.trim();
-    if(task.length) {
-      // Todo List の HTML を作成
-      createTodoList(task);
-      // タスクに入力した文字をクリア
-      addTask.reset();
-    }
-  })
-}
+addTask.addEventListener('submit', (e) => {
+  // デフォルトのイベントを無効
+  e.preventDefault();
+
+  // タスクに入力した値を空白を除外して格納
+  const task = addTask.add.value.trim();
+  if(task.length) {
+    // Todo List の HTML を作成
+    createTodoList(task);
+    // タスクに入力した文字をクリア
+    addTask.reset();
+  }
+})
