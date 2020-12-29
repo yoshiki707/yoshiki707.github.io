@@ -211,6 +211,10 @@ body {
   /* 見かけ上削除。実際には消してない */
 }
 
+.contents-list-item > li:hover {
+  border: 1px solid #0099E7;
+}
+
 .contents-list-item > li.filtered {
   display: none;
 }

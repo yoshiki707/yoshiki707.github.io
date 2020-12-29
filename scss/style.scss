@@ -45,6 +45,9 @@
         background-color: $White;
         @include flex-center();
         /* 見かけ上削除。実際には消してない */
+        &:hover {
+          @include border($Bule);
+        }
         &.filtered {
           display : none;
         }
