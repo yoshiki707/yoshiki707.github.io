@@ -32,6 +32,22 @@
   &-flex {
     @include flex-center();
   }
+  &-list {
+    margin: 0 $base-size * 3;
+    &-item {
+      > li {
+        border-radius: $base-size;
+        padding: 0 $base-size * 2;
+        height: $base-size * 7;
+        width: 100%;
+        background-color: $White;
+        @include flex-center();
+        > span {
+          margin-right: $base-size;
+        }
+      }
+    }
+  }
 }
 .common-section {
   padding: $base-size * 3;

@@ -1,5 +1,7 @@
 "use strict";
+// form
 var addTask = document.getElementById('addForm');
+// ul
 var list = document.getElementById('todoLists');
 var createTodoList = function (task) {
     // HTML テンプレートを生成
@@ -16,5 +18,10 @@ addTask.addEventListener('submit', function (e) {
         createTodoList(task);
         // タスクに入力した文字をクリア
         addTask.reset();
+    }
+});
+list.addEventListener('click', function (e) {
+    if (e.target.classList.contains('delete')) {
+        e.target.parentElement.remove();
     }
 });

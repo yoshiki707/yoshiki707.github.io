@@ -1,4 +1,6 @@
+// form
 const addTask = (document.getElementById('addForm') as HTMLFormElement);
+// ul
 const list = (document.getElementById('todoLists') as HTMLElement);
 
 const createTodoList = (task:string | number) => {
@@ -23,5 +25,10 @@ addTask.addEventListener('submit', (e) => {
     createTodoList(task);
     // タスクに入力した文字をクリア
     addTask.reset();
+  }
+})
+list.addEventListener('click', (e) => {
+  if (e.target.classList.contains('delete')) {
+    e.target.parentElement.remove();
   }
 })
