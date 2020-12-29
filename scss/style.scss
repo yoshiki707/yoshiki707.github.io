@@ -16,9 +16,10 @@
 .main {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: $base-size * 5 auto 0;
   background-color: $Gray;
   padding: $base-size * 3;
+  border-radius: $base-size;
 }
 .container {
   // margin: 0 3%;
