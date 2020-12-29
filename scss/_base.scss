@@ -7,9 +7,16 @@ $Bule: #0099E7;
 body {
   color: $black;
 }
+// Responsive
+$sp: 768px;
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
 // border
-@mixin border ($color:$DarkGray) {
-  border: 1px solid $color;
+@mixin border ($size: 1px, $color: $DarkGray) {
+  border: $size solid $color;
 }
 @mixin border-bottom ($color:$DarkGray) {
   border-bottom: 1px solid $color;

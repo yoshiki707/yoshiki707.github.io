@@ -4,11 +4,14 @@
 
 // header
 .wrap {
-  margin: 0 3%;
+  margin: 0 $base-size * 3;
+  @include sp {
+    margin: 0 $base-size * 2;
+  }
 }
 .header {
   width: 100%;
-  max-width: 1200px;
+  max-width: $content-size;
   margin: 0 auto;
   height: $base-size * 10;
   @include border-bottom();
@@ -16,11 +19,14 @@
 }
 .main {
   width: 100%;
-  max-width: 1200px;
+  max-width: $content-size;
   margin: $base-size * 5 auto 0;
   background-color: $Gray;
   padding: $base-size * 3;
   border-radius: $base-size;
+  @include sp {
+    padding: $base-size * 2;
+  }
 }
 .container {
   // margin: 0 3%;
@@ -32,9 +38,15 @@
   width: 100%;
   &-flex {
     @include flex-center();
+    @include sp {
+      flex-direction: column-reverse;
+    }
   }
   &-list {
     margin: 0 $base-size * 3;
+    @include sp {
+      margin: 0;
+    }
     &-item {
       > li {
         border-radius: $base-size;
@@ -43,16 +55,25 @@
         height: $base-size * 7;
         width: 100%;
         background-color: $White;
+        position: relative;
         @include flex-center();
+        @include border(2px, transparent);
+        transition: 0.1s;
         /* 見かけ上削除。実際には消してない */
         &:hover {
-          @include border($Bule);
+          @include border(2px, $Bule);
         }
         &.filtered {
           display : none;
         }
         > span {
           margin-right: $base-size;
+        }
+        .delete {
+          position: absolute;
+          right: $base-size * 2;
+          font-size: 24px;
+          cursor: pointer;
         }
       }
     }
@@ -61,14 +82,19 @@
 .common-section {
   padding: $base-size * 3;
   width: 50%;
+  @include sp {
+    width: 100%;
+    padding: $base-size 0;
+  }
   &__form {
     width: 100%;
     @include flex-center();
     flex-direction: column;
     label {
       cursor: pointer;
+      @include border(2px, transparent);
       &:hover + input {
-        @include border($Bule);
+        @include border(2px, $Bule);
       }
     }
     &-control {
@@ -79,15 +105,17 @@
       margin:  $base-size * 2 0;
       width: 100%;
       text-align: center;
+      outline: 0;
+      @include border(2px, transparent);
       &:hover {
-        @include border($Bule);
+        @include border(2px, $Bule);
       }
     }
   }
 }
 .footer {
   width: 100%;
-  max-width: 1200px;
+  max-width: $content-size;
   margin: 0 auto;
   &-copyright {
     text-align: center;
