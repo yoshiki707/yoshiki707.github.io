@@ -36,6 +36,11 @@
 }
 .contents {
   width: 100%;
+  &-container {
+    padding: $base-size * 3;
+    @include flex-center();
+    flex-direction: column
+  }
   &-flex {
     @include flex-center();
     @include sp {
@@ -78,6 +83,9 @@
       }
     }
   }
+}
+.portfolio {
+  margin: $base-size * 2 0 0;
 }
 .common-section {
   padding: $base-size * 3;
