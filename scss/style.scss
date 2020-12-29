@@ -44,6 +44,10 @@
         width: 100%;
         background-color: $White;
         @include flex-center();
+        /* 見かけ上削除。実際には消してない */
+        &.filtered {
+          display : none;
+        }
         > span {
           margin-right: $base-size;
         }
@@ -76,5 +80,16 @@
         @include border($Bule);
       }
     }
+  }
+}
+.footer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  &-copyright {
+    text-align: center;
+    margin: $base-size * 3 0 0;
+    font-size: 12px;
+    width: 100%;
   }
 }

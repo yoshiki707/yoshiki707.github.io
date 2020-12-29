@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   scroll-behavior: smooth;
 }
@@ -133,6 +134,10 @@ body {
   color: #2B2D2E;
 }
 
+body {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+}
+
 .wrap {
   margin: 0 3%;
 }
@@ -203,6 +208,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  /* 見かけ上削除。実際には消してない */
+}
+
+.contents-list-item > li.filtered {
+  display: none;
 }
 
 .contents-list-item > li > span {
@@ -251,5 +261,18 @@ body {
 
 .common-section__form-control:hover {
   border: 1px solid #0099E7;
+}
+
+.footer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-copyright {
+  text-align: center;
+  margin: 24px 0 0;
+  font-size: 12px;
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

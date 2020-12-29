@@ -1,7 +1,33 @@
 // form
 const addTask = (document.getElementById('addForm') as HTMLFormElement);
-// ul
 const list = (document.getElementById('todoLists') as HTMLElement);
+const search = (document.getElementById('searchBox') as HTMLInputElement);
+
+(function() {
+  // 初期化処理
+  // ローカルストレージに格納されている値を取得し、リストを生成する
+  for(var key in localStorage) {
+    var html = localStorage.getItem(key);
+    if (html) {
+      list.innerHTML += localStorage.getItem(key);
+    }
+  }
+})();
+
+const saveTaskToLocalStorage = (task, html) => {
+  // nullはlocalStorageに保存しない
+  if (html) {
+    // localStorageは、0から始まる
+    localStorage.setItem(task, html);
+    return;
+  }
+  return;
+}
+
+const deleteTaskFromLocalStorage = (task) => {
+  localStorage.removeItem(task);
+  return;
+}
 
 const createTodoList = (task:string | number) => {
   // HTML テンプレートを生成
@@ -13,6 +39,7 @@ const createTodoList = (task:string | number) => {
   `;
 
   list.innerHTML += html;
+  saveTaskToLocalStorage(task, html);
 }
 addTask.addEventListener('submit', (e) => {
   // デフォルトのイベントを無効
@@ -27,15 +54,15 @@ addTask.addEventListener('submit', (e) => {
     addTask.reset();
   }
 })
+
 // 削除機能
 list.addEventListener('click', (e) => {
   if (e.target.classList.contains('delete')) {
     e.target.parentElement.remove();
   }
 })
-// フィルタリング機能
-const search = (document.getElementById('searchBox') as HTMLInputElement);
 
+// フィルタリング機能
 const filterTasks = (term: string) => {
 
   Array.form(list.children)
