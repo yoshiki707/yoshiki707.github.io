@@ -1,6 +1,7 @@
 
 @import "_reset";
 @import "_base";
+
 // header
 .wrap {
   margin: 0 3%;
@@ -38,6 +39,7 @@
       > li {
         border-radius: $base-size;
         padding: 0 $base-size * 2;
+        margin: $base-size * 2 0;
         height: $base-size * 7;
         width: 100%;
         background-color: $White;

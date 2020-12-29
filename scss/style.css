@@ -1,26 +1,3 @@
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-*::before, *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body, h1, h2, h3, h4, p, figure, blockquote, dl, dd, ul, ol {
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul, ol {
-  padding: 0;
-  list-style: none;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -29,23 +6,102 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  margin: 0;
 }
 
-a:not([class]) {
+body h1 {
+  margin: 0;
+}
+
+body h2 {
+  margin: 0;
+}
+
+body h3 {
+  margin: 0;
+}
+
+body h4 {
+  margin: 0;
+}
+
+body h5 {
+  margin: 0;
+}
+
+body p {
+  margin: 0;
+}
+
+body a {
+  text-decoration: none;
+}
+
+body a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-img, picture {
+body img {
   max-width: 100%;
   display: block;
 }
 
-input, button, textarea, select {
+body picture {
+  max-width: 100%;
+  display: block;
+}
+
+body figure {
+  margin: 0;
+}
+
+body blockquote {
+  margin: 0;
+}
+
+body dl {
+  margin: 0;
+}
+
+body dd {
+  margin: 0;
+}
+
+body ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body input {
   font: inherit;
 }
 
+body button {
+  font: inherit;
+}
+
+body textarea {
+  font: inherit;
+}
+
+body select {
+  font: inherit;
+}
+
+body * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  * {
+  body * {
     -webkit-animation-duration: .01ms !important;
             animation-duration: .01ms !important;
     -webkit-animation-iteration-count: 1 !important;
@@ -54,7 +110,15 @@ input, button, textarea, select {
             transition-duration: .01ms !important;
     scroll-behavior: auto !important;
   }
-  *::before, *::after {
+}
+
+body *::before, body *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body *::before, body *::after {
     -webkit-animation-duration: .01ms !important;
             animation-duration: .01ms !important;
     -webkit-animation-iteration-count: 1 !important;
@@ -126,6 +190,7 @@ body {
 .contents-list-item > li {
   border-radius: 8px;
   padding: 0 16px;
+  margin: 16px 0;
   height: 56px;
   width: 100%;
   background-color: #ffffff;
