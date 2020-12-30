@@ -1,7 +1,7 @@
 // form
-const addTask = (document.getElementById('addForm') as HTMLFormElement);
-const list = (document.getElementById('todoLists') as HTMLElement);
-const search = (document.getElementById('searchBox') as HTMLInputElement);
+const addTask = document.getElementById('addForm') as HTMLFormElement;
+const list = document.getElementById('todoLists') as HTMLElement;
+const search = document.getElementById('searchBox') as HTMLInputElement;
 
 (function() {
   // 初期化処理
@@ -56,7 +56,7 @@ addTask.addEventListener('submit', (e) => {
 })
 
 // 削除機能
-list.addEventListener('click', (e: MouseEvent) => {
+list.addEventListener('click', (e) => {
   if (e.target.classList.contains('delete')) {
     e.target.parentElement.remove();
   }
@@ -67,7 +67,7 @@ const filterTasks = (term: string) => {
 
   Array.form(list.children)
   // フィルタ条件
-    .filter((todo) => !todo.textContent.toLowerCase().includes(term))
+    .filter((todo: string) => !todo.textContent.toLowerCase().includes(term))
     .forEach((todo) => todo.classList.add('filtered'));
 
   Array.form(list.children)
