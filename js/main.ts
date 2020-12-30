@@ -14,7 +14,7 @@ const search = (document.getElementById('searchBox') as HTMLInputElement);
   }
 })();
 
-const saveTaskTosessionStorage = (task, html) => {
+const saveTaskTosessionStorage = (task: string, html: string) => {
   // nullはsessionStorageに保存しない
   if (html) {
     // sessionStorageは、0から始まる
@@ -24,12 +24,12 @@ const saveTaskTosessionStorage = (task, html) => {
   return;
 }
 
-const deleteTaskFromsessionStorage = (task) => {
+const deleteTaskFromsessionStorage = (task: string) => {
   sessionStorage.removeItem(task);
   return;
 }
 
-const createTodoList = (task:string | number) => {
+const createTodoList = (task: string) => {
   // HTML テンプレートを生成
   const html = `
   <li>
@@ -56,7 +56,7 @@ addTask.addEventListener('submit', (e) => {
 })
 
 // 削除機能
-list.addEventListener('click', (e) => {
+list.addEventListener('click', (e: MouseEvent) => {
   if (e.target.classList.contains('delete')) {
     e.target.parentElement.remove();
   }
