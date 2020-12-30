@@ -4,9 +4,13 @@
 
 // header
 .wrap {
-  margin: 0 $base-size * 3;
+  margin: $base-size * 3;
+  padding: $base-size* 3;
+  border-radius: $base-size;
+  @include border();
   @include sp {
-    margin: 0 $base-size * 2;
+    margin: $base-size * 2;
+    padding: $base-size* 2;
   }
 }
 .header {
@@ -14,18 +18,21 @@
   max-width: $content-size;
   margin: 0 auto;
   height: $base-size * 10;
-  @include border-bottom();
   @include flex-center();
+  @include sp {
+    height: $base-size * 6;
+  }
 }
 .main {
   width: 100%;
   max-width: $content-size;
-  margin: $base-size * 5 auto 0;
+  margin: $base-size * 4 auto 0;
   background-color: $Gray;
   padding: $base-size * 3;
   border-radius: $base-size;
   @include sp {
     padding: $base-size * 2;
+    margin: $base-size * 2 auto 0;
   }
 }
 .container {

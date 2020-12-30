@@ -14,12 +14,30 @@ body h1 {
   margin: 0;
 }
 
+@media (max-width: 768px) {
+  body h1 {
+    font-size: 24px;
+  }
+}
+
 body h2 {
   margin: 0;
 }
 
+@media (max-width: 768px) {
+  body h2 {
+    font-size: 18px;
+  }
+}
+
 body h3 {
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  body h3 {
+    font-size: 16px;
+  }
 }
 
 body h4 {
@@ -32,6 +50,12 @@ body h5 {
 
 body p {
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  body p {
+    font-size: 14px;
+  }
 }
 
 body a {
@@ -139,12 +163,16 @@ body {
 }
 
 .wrap {
-  margin: 0 24px;
+  margin: 24px;
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid #B2B7C1;
 }
 
 @media (max-width: 768px) {
   .wrap {
-    margin: 0 16px;
+    margin: 16px;
+    padding: 16px;
   }
 }
 
@@ -153,7 +181,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   height: 80px;
-  border-bottom: 1px solid #B2B7C1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -165,10 +192,16 @@ body {
           align-items: center;
 }
 
+@media (max-width: 768px) {
+  .header {
+    height: 48px;
+  }
+}
+
 .main {
   width: 100%;
   max-width: 1200px;
-  margin: 40px auto 0;
+  margin: 32px auto 0;
   background-color: #F0F3F5;
   padding: 24px;
   border-radius: 8px;
@@ -177,6 +210,7 @@ body {
 @media (max-width: 768px) {
   .main {
     padding: 16px;
+    margin: 16px auto 0;
   }
 }
 
