@@ -6,26 +6,26 @@ const search = (document.getElementById('searchBox') as HTMLInputElement);
 (function() {
   // 初期化処理
   // ローカルストレージに格納されている値を取得し、リストを生成する
-  for(var key in localStorage) {
-    var html = localStorage.getItem(key);
+  for(var key in sessionStorage) {
+    var html = sessionStorage.getItem(key);
     if (html) {
-      list.innerHTML += localStorage.getItem(key);
+      list.innerHTML += sessionStorage.getItem(key);
     }
   }
 })();
 
-const saveTaskToLocalStorage = (task, html) => {
-  // nullはlocalStorageに保存しない
+const saveTaskTosessionStorage = (task, html) => {
+  // nullはsessionStorageに保存しない
   if (html) {
-    // localStorageは、0から始まる
-    localStorage.setItem(task, html);
+    // sessionStorageは、0から始まる
+    sessionStorage.setItem(task, html);
     return;
   }
   return;
 }
 
-const deleteTaskFromLocalStorage = (task) => {
-  localStorage.removeItem(task);
+const deleteTaskFromsessionStorage = (task) => {
+  sessionStorage.removeItem(task);
   return;
 }
 
@@ -39,7 +39,7 @@ const createTodoList = (task:string | number) => {
   `;
 
   list.innerHTML += html;
-  saveTaskToLocalStorage(task, html);
+  saveTaskTosessionStorage(task, html);
 }
 addTask.addEventListener('submit', (e) => {
   // デフォルトのイベントを無効

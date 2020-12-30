@@ -6,31 +6,31 @@ var search = document.getElementById('searchBox');
 (function () {
     // 初期化処理
     // ローカルストレージに格納されている値を取得し、リストを生成する
-    for (var key in localStorage) {
-        var html = localStorage.getItem(key);
+    for (var key in sessionStorage) {
+        var html = sessionStorage.getItem(key);
         if (html) {
-            list.innerHTML += localStorage.getItem(key);
+            list.innerHTML += sessionStorage.getItem(key);
         }
     }
 })();
-var saveTaskToLocalStorage = function (task, html) {
-    // nullはlocalStorageに保存しない
+var saveTaskTosessionStorage = function (task, html) {
+    // nullはsessionStorageに保存しない
     if (html) {
-        // localStorageは、0から始まる
-        localStorage.setItem(task, html);
+        // sessionStorageは、0から始まる
+        sessionStorage.setItem(task, html);
         return;
     }
     return;
 };
-var deleteTaskFromLocalStorage = function (task) {
-    localStorage.removeItem(task);
+var deleteTaskFromsessionStorage = function (task) {
+    sessionStorage.removeItem(task);
     return;
 };
 var createTodoList = function (task) {
     // HTML テンプレートを生成
     var html = "\n  <li>\n    <span>" + task + "</span>\n    <i class=\"far fa-trash-alt delete\"></i>\n  </li>\n  ";
     list.innerHTML += html;
-    saveTaskToLocalStorage(task, html);
+    saveTaskTosessionStorage(task, html);
 };
 addTask.addEventListener('submit', function (e) {
     // デフォルトのイベントを無効
