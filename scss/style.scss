@@ -7,7 +7,7 @@
   margin: $base-size * 3;
   padding: $base-size* 3;
   border-radius: $base-size;
-  @include border();
+  @include border(1px, $DarkGray);
   @include sp {
     margin: $base-size * 2;
     padding: $base-size* 2;
