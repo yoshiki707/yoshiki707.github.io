@@ -2,7 +2,6 @@
 // form
 var addTask = document.getElementById('addForm');
 var list = document.getElementById('todoLists');
-var search = document.getElementById('searchBox');
 (function () {
     // 初期化処理
     // ローカルストレージに格納されている値を取得し、リストを生成する
@@ -51,17 +50,18 @@ list.addEventListener('click', function (e) {
     }
 });
 // フィルタリング機能
+var search = document.getElementById('searchBox');
 var filterTasks = function (term) {
-    Array.form(list.children)
+    Array.from(list.children)
         // フィルタ条件
         .filter(function (todo) { return !todo.textContent.toLowerCase().includes(term); })
         .forEach(function (todo) { return todo.classList.add('filtered'); });
-    Array.form(list.children)
+    Array.from(list.children)
         .filter(function (todo) { return todo.textContent.toLowerCase().includes(term); })
         .forEach(function (todo) { return todo.classList.remove('filtered'); });
 };
 search.addEventListener('keyup', function () {
-    // 空白削除かつ、小文字に変換（大文字、小文字の区別をなくす）
+    // 空白削除かつ、小文字に変換(大文字・小文字の区別をなくす)
     var term = search.value.trim().toLowerCase();
     filterTasks(term);
 });

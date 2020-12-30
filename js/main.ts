@@ -1,7 +1,6 @@
 // form
 const addTask = document.getElementById('addForm') as HTMLFormElement;
 const list = document.getElementById('todoLists') as HTMLElement;
-const search = document.getElementById('searchBox') as HTMLInputElement;
 
 (function() {
   // 初期化処理
@@ -46,7 +45,7 @@ addTask.addEventListener('submit', (e) => {
   e.preventDefault();
 
   // タスクに入力した値を空白を除外して格納
-  const task = addTask.add.value.trim();
+  const task: string = addTask.add.value.trim();
   if(task.length) {
     // Todo List の HTML を作成
     createTodoList(task);
@@ -63,20 +62,21 @@ list.addEventListener('click', (e) => {
 })
 
 // フィルタリング機能
-const filterTasks = (term: string) => {
+const search = document.getElementById('searchBox') as HTMLInputElement;
+const filterTasks = (term) => {
 
-  Array.form(list.children)
-  // フィルタ条件
-    .filter((todo: string) => !todo.textContent.toLowerCase().includes(term))
+  Array.from(list.children)
+    // フィルタ条件
+    .filter((todo) => !todo.textContent.toLowerCase().includes(term))
     .forEach((todo) => todo.classList.add('filtered'));
 
-  Array.form(list.children)
+  Array.from(list.children)
     .filter((todo) => todo.textContent.toLowerCase().includes(term))
     .forEach((todo) => todo.classList.remove('filtered'));
 };
 
 search.addEventListener('keyup', () => {
-  // 空白削除かつ、小文字に変換（大文字、小文字の区別をなくす）
+  // 空白削除かつ、小文字に変換(大文字・小文字の区別をなくす)
   const term = search.value.trim().toLowerCase();
   filterTasks(term);
 });
