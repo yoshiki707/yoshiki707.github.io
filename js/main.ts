@@ -6,8 +6,8 @@ const search = document.getElementById('searchBox') as HTMLInputElement;
 (function() {
   // 初期化処理
   // ローカルストレージに格納されている値を取得し、リストを生成する
-  for(var key in sessionStorage) {
-    var html = sessionStorage.getItem(key);
+  for(let key in sessionStorage) {
+    let html = sessionStorage.getItem(key);
     if (html) {
       list.innerHTML += sessionStorage.getItem(key);
     }
